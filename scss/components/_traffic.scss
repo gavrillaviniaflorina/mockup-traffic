@@ -1,0 +1,43 @@
+.traffic {
+    grid-area: traf;
+    width: 90%;
+    margin: auto;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    & .list {
+        @include flexy(flex, row, none, space-evenly, center);
+        list-style: none;
+        & .list li {
+            border: 2px solid white;
+            padding: 5px;
+        }
+        & .here {
+            border-radius: 40%;
+            background-color: #81c88d;
+            color: white;
+        }
+    }
+    // & .bar-widget {
+    //     grid-area: bar;
+    // }
+    // & .mobile-widget {
+    //     grid-area: mob;
+    // }
+}
+
+.sort {
+    @include flexy(flex, column, none, space-evenly, center);
+    grid-area: sort;
+}
+
+@media(min-width:720px) {
+    .ceva {
+        @include flexy(flex, row, none, space-between, center)
+    }
+    .list li {
+        margin-right: 10px;
+    }
+    .sort {
+        @include flexy(flex, row, none, space-evenly, center);
+    }
+}

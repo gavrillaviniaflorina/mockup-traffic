@@ -1,0 +1,4 @@
+%article {
+    width: 100%;
+    @include flexy(flex, column, none, center, center);
+}

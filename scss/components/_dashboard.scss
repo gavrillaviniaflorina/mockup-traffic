@@ -1,0 +1,26 @@
+.dashboard {
+    grid-area: dash;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.8fr 1fr;
+    grid-template-areas: 'tag input' 'alert alert';
+    border: none;
+    & .input {
+        @include grid-area(input);
+        background-color: #f7f7f7;
+        border: none;
+    }
+    & .tag {
+        @include grid-area(tag);
+        align-self: center;
+        font-weight: 900;
+    }
+    & .alert {
+        @include grid-area(alert);
+        background-color: #7476be;
+        height: 30px;
+        color: white;
+        border-radius: 10px;
+        align-self: center;
+    }
+}

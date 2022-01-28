@@ -1,0 +1,18 @@
+@import '../components/dashboard';
+@import '../components/social';
+@import '../components/members';
+@import '../components/messege';
+@import '../components/settings';
+@import '../components/traffic';
+main {
+    @include grid-area(main);
+}
+
+@media(min-width:1024px) {
+    main {
+        display: grid;
+        grid-template-rows: 100px 0.7fr 0.5fr 0.3fr 0.7fr 0.5fr;
+        grid-column: 1fr 1fr;
+        grid-template-areas: 'dash dash' 'traf traf' 'sort sort' 'social social' 'mem mem' 'mes set';
+    }
+}

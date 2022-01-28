@@ -1,0 +1,62 @@
+.settings {
+    grid-area: set;
+    width: 100%;
+    @include flexy(flex, column, none, flex-end, center);
+    & h3 {
+        align-self: flex-start;
+    }
+    & .options {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 100px;
+        grid-template-areas: 'notifi on' 'public of';
+    }
+    & button {
+        height: 20px;
+        background-color: #4d4d73;
+        color: white;
+        border-radius: 10px;
+    }
+    & .notif {
+        @include grid-area(notifi);
+        align-self: center;
+    }
+    & .public {
+        @include grid-area(public);
+        align-self: center;
+    }
+    & .on {
+        @include grid-area(on);
+    }
+    & .off {
+        @include grid-area(of);
+    }
+    & .btn {
+        width: 50px;
+        align-self: center;
+    }
+    & .timezone {
+        width: 80%;
+        margin-bottom: 20px;
+        background-color: #f7f7f7;
+        border: none;
+    }
+    & .final {
+        width: 100%;
+        @include flexy(flex, row, none, center, center);
+        margin-bottom: 20px;
+    }
+    & .b1 {
+        height: 40px;
+        width: 40%;
+        margin-left: 5px;
+    }
+}
+
+@media(min-width:1024px) {
+    .settings {
+        margin-top: 20px;
+        padding: 0px;
+    }
+}
